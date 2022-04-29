@@ -27,13 +27,21 @@
     </ion-col>
   </ion-row>
 
-  <ion-row>
+  <ion-row *ngFor="let player of numberOfPLayer">
     <ion-col>
-      <ion-input placeholder="Vorname"></ion-input>
+      <ion-input placeholder="Vorname" [(ngModel)]="playerClass.playerLastName"></ion-input>
     </ion-col>
 
     <ion-col>
-      <ion-input placeholder="Nachname"></ion-input>
+      <ion-input placeholder="Nachname" [(ngModel)]="playerClass.playerFirstName"></ion-input>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="addMorePlayer()">
+        <ion-icon name="person-add-outline"></ion-icon>
+      </ion-button>
     </ion-col>
   </ion-row>
 </ion-grid>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import {PlayerClass} from '../Services/player-class';
 
 @Component({
   selector: 'app-tournaments',
@@ -8,6 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class TeamsPage implements OnInit {
   public folder: string;
+  public playerClass: PlayerClass = new PlayerClass();
+  public numberOfPLayer =  ['test','test'];
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
@@ -15,4 +18,9 @@ export class TeamsPage implements OnInit {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');
   }
 
+addMorePlayer(){
+    this.numberOfPLayer.push('test');
 }
+
+}
+

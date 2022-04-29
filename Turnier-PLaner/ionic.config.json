@@ -1,0 +1,7 @@
+{
+  "name": "Turnier-PLaner",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
